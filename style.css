@@ -1,0 +1,23 @@
+body{
+    background-color: cornsilk;
+}
+
+h1{
+    color:darkorange;
+    text-align: center;
+}
+
+h2{
+    color:aqua;
+    text-align: center;
+    background-color: rgba(127, 0, 0, 0.5);
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+h3{
+    color:black;
+    text-align: center;
+    background-color: rgb(22, 255, 158);
+
+}
