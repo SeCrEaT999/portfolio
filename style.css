@@ -1,0 +1,416 @@
+body{
+    background-color: black;
+    -webkit-user-select: none !important; 
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html{
+    -webkit-user-select: none !important; 
+    -moz-user-select: -moz-none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+@font-face {
+    font-family: 'MBC1961GulimM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Diphylleia-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/Diphylleia-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p{
+    color: white;
+}
+
+.top{
+    color: white;
+    position: relative;
+    left: 20px;
+}
+
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: black;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: padding 0.3s ease;
+}
+
+#space{
+    height: 100px;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: margin-left 0.3s ease;
+}
+
+#explanation{
+    text-align: center;
+    background: #12c2e9;
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.skill_top{
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    transition: transform 0.3s ease;
+    flex-basis: calc(50% - 10px);
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.item_color {
+    transition: transform 0.3s ease;
+    flex-basis: calc(50% - 10px);
+    background: #12c2e9;
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.item:hover {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.item_color:hover {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.item_text_white {
+    color: #333;
+}
+.item_text_color {
+    color:white;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+}
+
+.page-section-white {
+    background-color: white;
+    padding-top: 30px;
+}
+
+.white-p {
+    color: black;
+}
+
+.bundle-title {
+    color: white;
+    font-size: 30px;
+    font-family: 'Diphylleia-Regular';
+}
+
+.projects_top{
+    color: black;
+    text-align: center;
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none; /* 클릭 이벤트를 차단 */
+    transition: opacity 0.3s ease; /* 부드러운 나타나기 효과 */
+}
+
+.popup-container.active {
+    opacity: 1;
+    pointer-events: auto; /* 클릭 이벤트 활성화 */
+}
+
+.popup-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.popup-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.popup-content {
+    font-size: 16px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+}
+
+.projects {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bundle {
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 20px auto;
+    text-align: center;
+    word-break: break-all;
+}
+
+.detail-top{
+    font-size: 20px;
+    font-family: 'MBC1961GulimM';
+}
+
+.detail{
+    font-size: 15px;
+    color: white;
+    float: left;
+    font-family: 'MBC1961GulimM';
+}
+
+.detail-image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    border: 3px solid white;
+}
+
+#slider-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#slider {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    width: calc(100% - 10px); /* 이미지 너비와 여백을 포함한 전체 너비 설정 */
+    margin: 0 6px;
+}
+
+.slide:first-child {
+    margin-left: 0;
+}
+  
+.slide:last-child {
+    margin-right: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border: 3px solid white;
+}
+
+.slide-nav {
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.slide-nav button {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.slide-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+  
+
+.about-me-top{
+    background-color: white;
+    padding-top: 20px;
+}
+
+.about-me-top{
+    color: black;
+    text-align: center;
+}
+
+/* CSS 스타일 */
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://i.ibb.co/vh8XdqM/angle-small-up-1.png');
+    background-size: cover;
+    background-color: #555;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    
+    transition: opacity 0.3s ease-in-out, /* 변경: 투명도 전환 */
+    transform 1s ease;
+}
+  
+
+.animated-title {font-size:60px; font-family:'Raleway',Sans-serif; font-weight:300; position: relative; width: 100%; max-width:100%; height: auto; padding:70px 0; overflow-x: hidden; overflow-y: hidden; }
+.animated-title .track {position: absolute; white-space: nowrap;will-change: transform;animation: marquee 20s linear infinite; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (hover: hover) and (min-width: 700px){
+.animated-title .content {-webkit-transform: translateY(calc(100% - 8rem)); transform: translateY(calc(100% - 8rem));}
+    }
+
+.lower-title{
+    font-size: 90px;
+    text-align: center;
+}
+
+.under{
+    position: relative;
+    left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .item {
+        flex-basis: calc(100% - 10px);
+    }
+    .item_color {
+        flex-basis: calc(100% - 10px);
+    }
+    #item3 {
+        order: 4; 
+    }
+    #item4 {
+        order: 3; 
+    }
+    #item5{
+        order: 5;
+    }
+    #item6{
+        order: 6;
+    }
+    .profile-img{
+        display: none;
+    }
+    .header{
+        justify-content: center;
+    }
+    .top{
+        left: 0px;
+    }
+    .lower-title{
+        font-size: 50px;
+    }
+    #top-bar{
+        height: 150px;
+    }
+    #space{
+        height: 130px;
+    }
+    .detail-top{
+        font-size: 15px;
+    }
+}
