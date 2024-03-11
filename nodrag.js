@@ -2,7 +2,6 @@ document.oncontextmenu = function() {
     return false;
 }
 
-// 드래그 방지
 var omitformtags = ["input", "textarea", "select"]
 omitformtags = omitformtags.join("|")
 

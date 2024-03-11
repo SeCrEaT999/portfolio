@@ -187,13 +187,13 @@ p{
     max-width: 400px;
     text-align: center;
     opacity: 0;
-    pointer-events: none; /* 클릭 이벤트를 차단 */
-    transition: opacity 0.3s ease; /* 부드러운 나타나기 효과 */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
 .popup-container.active {
     opacity: 1;
-    pointer-events: auto; /* 클릭 이벤트 활성화 */
+    pointer-events: auto;
 }
 
 .popup-title {
@@ -250,11 +250,22 @@ p{
     font-family: 'MBC1961GulimM';
 }
 
+.detail-important{
+    font-size: 15px;
+    color: white;
+    /*
+    float: left;
+    text-align: left;
+    */
+    font-weight: 1000;
+}
+
 .detail{
     font-size: 15px;
     color: white;
     float: left;
-    font-family: 'MBC1961GulimM';
+    text-align: left;
+    display: none;
 }
 
 .detail-image {
@@ -281,7 +292,7 @@ p{
 .slide {
     width: 100%;
     flex-shrink: 0;
-    width: calc(100% - 10px); /* 이미지 너비와 여백을 포함한 전체 너비 설정 */
+    width: calc(100% - 10px);
     margin: 0 6px;
 }
 
@@ -321,6 +332,9 @@ p{
     background-color: rgba(255, 255, 255, 0.8);
 }
   
+.waving{
+    width: 100%;
+}
 
 .about-me-top{
     background-color: white;
@@ -348,7 +362,7 @@ p{
     cursor: pointer;
     z-index: 9999;
     
-    transition: opacity 0.3s ease-in-out, /* 변경: 투명도 전환 */
+    transition: opacity 0.3s ease-in-out,
     transform 1s ease;
 }
   
@@ -366,6 +380,7 @@ p{
 .lower-title{
     font-size: 90px;
     text-align: center;
+    margin-top: 30px;
 }
 
 .under{
@@ -376,9 +391,16 @@ p{
 @media screen and (max-width: 600px) {
     .item {
         flex-basis: calc(100% - 10px);
+        max-width: 90%;
     }
     .item_color {
         flex-basis: calc(100% - 10px);
+        max-width: 90%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     #item3 {
         order: 4; 

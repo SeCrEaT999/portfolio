@@ -22,4 +22,4 @@ function nextSlide() {
   showSlide(slideIndex);
 }
 
-showSlide(0); // 페이지 로드 시 첫 번째 슬라이드 보이기
+showSlide(0);
